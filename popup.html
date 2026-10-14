@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zena</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="mark">Z</div>
+    <div>
+      <h1>Zena</h1>
+      <p>Choose what YouTube shows you</p>
+    </div>
+  </header>
+
+  <section class="group">
+    <h2>Recommendations</h2>
+
+    <label class="row" for="hideHomeRecommendations">
+      <span class="row-text">
+        <span class="row-title">Homepage recommendations</span>
+        <span class="row-sub">Hide the suggested-video feed on youtube.com</span>
+      </span>
+      <span class="switch">
+        <input type="checkbox" id="hideHomeRecommendations" />
+        <span class="slider"></span>
+      </span>
+    </label>
+
+    <label class="row" for="hideSidebarRecommendations">
+      <span class="row-text">
+        <span class="row-title">Sidebar recommendations</span>
+        <span class="row-sub">Hide "Up next" suggestions beside a playing video</span>
+      </span>
+      <span class="switch">
+        <input type="checkbox" id="hideSidebarRecommendations" />
+        <span class="slider"></span>
+      </span>
+    </label>
+
+    <label class="row" for="hideEndScreenCards">
+      <span class="row-text">
+        <span class="row-title">End-screen suggestions</span>
+        <span class="row-sub">Hide suggested-video cards in the last seconds of a video</span>
+      </span>
+      <span class="switch">
+        <input type="checkbox" id="hideEndScreenCards" />
+        <span class="slider"></span>
+      </span>
+    </label>
+  </section>
+
+  <section class="group">
+    <h2>Other distractions</h2>
+
+    <label class="row" for="hideShorts">
+      <span class="row-text">
+        <span class="row-title">Shorts</span>
+        <span class="row-sub">Hide Shorts shelves and the Shorts nav entry</span>
+      </span>
+      <span class="switch">
+        <input type="checkbox" id="hideShorts" />
+        <span class="slider"></span>
+      </span>
+    </label>
+
+    <label class="row" for="hideComments">
+      <span class="row-text">
+        <span class="row-title">Comments</span>
+        <span class="row-sub">Hide the comment section under videos</span>
+      </span>
+      <span class="switch">
+        <input type="checkbox" id="hideComments" />
+        <span class="slider"></span>
+      </span>
+    </label>
+
+    <label class="row" for="hideLiveChat">
+      <span class="row-text">
+        <span class="row-title">Live chat</span>
+        <span class="row-sub">Hide the chat panel on live streams</span>
+      </span>
+      <span class="switch">
+        <input type="checkbox" id="hideLiveChat" />
+        <span class="slider"></span>
+      </span>
+    </label>
+
+    <label class="row" for="hideExploreTrending">
+      <span class="row-text">
+        <span class="row-title">Explore &amp; Trending</span>
+        <span class="row-sub">Hide these entries from the left-hand guide</span>
+      </span>
+      <span class="switch">
+        <input type="checkbox" id="hideExploreTrending" />
+        <span class="slider"></span>
+      </span>
+    </label>
+
+    <label class="row" for="disableAutoplay">
+      <span class="row-text">
+        <span class="row-title">Autoplay</span>
+        <span class="row-sub">Turn off YouTube's autoplay-next-video switch</span>
+      </span>
+      <span class="switch">
+        <input type="checkbox" id="disableAutoplay" />
+        <span class="slider"></span>
+      </span>
+    </label>
+  </section>
+
+  <footer class="footer">
+    <span id="status">Changes apply instantly</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
