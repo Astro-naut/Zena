@@ -1,0 +1,64 @@
+/* Zena — hiding rules.
+   Every rule is scoped under an attribute Zena sets on <html>, so nothing
+   is hidden unless the matching toggle is switched on in the popup. */
+
+/* 1. Homepage recommendations */
+html[data-zena-home="on"] ytd-browse[page-subtype="home"] #contents.ytd-rich-grid-renderer,
+html[data-zena-home="on"] ytd-browse[page-subtype="home"] ytd-rich-grid-renderer,
+html[data-zena-home="on"] ytd-two-column-browse-results-renderer[page-subtype="home"] {
+  display: none !important;
+}
+html[data-zena-home="on"] ytd-browse[page-subtype="home"]::before {
+  content: "Zena is hiding your homepage recommendations.";
+  display: block;
+  max-width: 640px;
+  margin: 64px auto;
+  padding: 24px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--yt-spec-text-secondary, #606060);
+}
+
+/* 2. "Up next" / related videos sidebar on the watch page */
+html[data-zena-sidebar="on"] #secondary.ytd-watch-flexy,
+html[data-zena-sidebar="on"] ytd-watch-next-secondary-results-renderer {
+  display: none !important;
+}
+/* Let the video + description reclaim the freed width */
+html[data-zena-sidebar="on"] #primary.ytd-watch-flexy {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* 3. In-video end-screen suggestion cards / end screen grid */
+html[data-zena-endscreen="on"] .ytp-ce-element,
+html[data-zena-endscreen="on"] .ytp-endscreen-content,
+html[data-zena-endscreen="on"] .html5-endscreen {
+  display: none !important;
+}
+
+/* 4. Comments section */
+html[data-zena-comments="on"] ytd-comments#comments {
+  display: none !important;
+}
+
+/* 5. Shorts shelves and nav entries */
+html[data-zena-shorts="on"] ytd-rich-shelf-renderer[is-shorts],
+html[data-zena-shorts="on"] ytd-reel-shelf-renderer,
+html[data-zena-shorts="on"] ytd-guide-entry-renderer:has(a[title="Shorts"]),
+html[data-zena-shorts="on"] ytd-mini-guide-entry-renderer:has(a[aria-label="Shorts"]) {
+  display: none !important;
+}
+
+/* 6. Live chat panel next to live streams */
+html[data-zena-livechat="on"] ytd-live-chat-frame#chat,
+html[data-zena-livechat="on"] #chat.ytd-watch-flexy {
+  display: none !important;
+}
+
+/* 7. Explore / Trending / Music / Gaming entries in the left guide */
+html[data-zena-explore="on"] ytd-guide-entry-renderer:has(a[title="Trending"]),
+html[data-zena-explore="on"] ytd-guide-entry-renderer:has(a[title="Explore"]),
+html[data-zena-explore="on"] ytd-guide-section-renderer:has(#guide-section-title[title="Explore"]) {
+  display: none !important;
+}
