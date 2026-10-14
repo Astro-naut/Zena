@@ -32,11 +32,3 @@ Click the Zena icon on any YouTube tab to open the toggle list:
 Every toggle takes effect immediately, on open tabs included — no reload
 needed for most; if the sidebar or feed doesn't disappear right away,
 YouTube's own page transition needs a second to catch up.
-
-## Files
-
-- `manifest.json` — extension configuration (Manifest V3)
-- `background.js` — sets defaults on first install
-- `content.js` / `content.css` — the actual hide logic, run on youtube.com
-- `popup.html` / `popup.css` / `popup.js` — the toggle panel
-- `icons/` — toolbar icons
