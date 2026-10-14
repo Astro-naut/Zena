@@ -4,6 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
+<!-- Tab icon: white Z on black, same in every browser theme -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='28' fill='%23000'/%3E%3Cpath fill='%23fff' d='M33 33H95V48L54 80H95V95H33V80L74 48H33Z'/%3E%3C/svg%3E" />
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACxElEQVR42s1XzUojQRD+qqdnCLIwieJBkKDsEwQPHhY8yJ4Cwt695CkEc9nzghc9eNwHEF9CUHwCcwnqIYgED+YQEpyZ7m8P9gyJZpKQuMaCYv6K+uqrqa7qBl7Fc9d1AH8ANABEACwAzqnW+Wo43+tvMLObXwAePgBwkj44rKEg9gYM4g9iPioT8cDzXgq+BuDJvUw+IQMpxhOANQ/AbwA/AZjBlPxHUQ7rmwsETZce8wnsUzUOsynuQeWGq9RcdK21Yz9LmoZFic77ICIgiaOjI1QqFVhrp84GSYgIWq0WarXakL+R9qNUKUUAvL6+5qzSarUyfyIyEkdPYtPtdmGMeZcBERmqE2ttxtBaCxFBp9OZ/RcMOve819WZXt9Kr9eD7/vwfT/7BVprFIvF2QNIq7dWq2FpaWlkjXieh06ng93dXRwfH6NYLCJJEvi+j16vh8PDQ4gIRGTsaphrTe/v7/P5+ZkkGUURSbLRaLBSqQzV0hgdD6CUGtIgCAiAQRDw9PQ0K7gkSUiS5+fnDMPwtcC0nobE9GxThxsbG7y8vCRJvry8ZEHU6/XM1vO8af1ONhKRzGG1WmW73SZJ9vt9kmS73Wa1Ws2A85bcTAEMMqnX6xnblPnV1RU3NzcJgL7vU0SGdK4AUgdhGPLs7IwkaYyhMYYkeXJy8hGDKb/4RIRbW1u8ubkhScZxTGMM+/0+Dw4OWCgUuLy8zJWVFZZKpXeaFuNYknnDKO1uFxcX2NnZQRRFCIIAABDHMR4fHxGGIUi+6/Fp12w2m9je3h47CyZ2wiiKkCTJUDPRWqNcLk/scqVSaf5WXCgUoLWeadSmrXmuAG5vb7G6ugpjTO4sGNXGlVK4v7+faLvwDYlye7NFidUA7gB8d5lQebujWSRvB+RIC4A7D0AZwA/3Un0Wc4f1d+EHky9xNPsSh9OFHc//AZfdIs03IL11AAAAAElFTkSuQmCC" />
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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" />
 <title>Zena — decide what YouTube shows you</title>
 <meta name="description" content="Zena is a free and open source browser extension that gives every YouTube distraction its own switch." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,10 +122,9 @@
   }
   .brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:17px;}
   .brand .mark{
-    width:32px; height:32px; border-radius:11px; background:var(--accent);
-    color:#fff; display:flex; align-items:center; justify-content:center;
-    font-size:15px; font-weight:800;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.35);
+    width:32px; height:32px; flex-shrink:0; display:block;
+    border-radius:7px;
+    box-shadow:0 0 0 1px var(--glass-border), 0 4px 10px -4px rgba(0,0,0,.35);
   }
   nav a{color:var(--sub); text-decoration:none; font-size:14px; margin-left:22px; font-weight:600;}
   nav a:hover{color:var(--ink);}
@@ -228,7 +231,7 @@
 <body>
   <header class="top">
     <div class="nav-pill glass">
-      <div class="brand"><span class="mark">Z</span> Zena</div>
+      <div class="brand"><svg class="mark" viewBox="0 0 128 128" width="32" height="32" role="img" aria-label="Zena logo"><rect width="128" height="128" rx="28" fill="#000"/><path fill="#fff" d="M33 33H95V48L54 80H95V95H33V80L74 48H33Z"/></svg> Zena</div>
       <nav>
         <a href="#how">How it works</a>
         <a href="#controls">Controls</a>
