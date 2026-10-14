@@ -1,4 +1,4 @@
-# Zena — YouTube Focus
+# Zena - Focus and Productivity Extension for Youtube
 
 Zena strips YouTube's distractions the way Unhook does, with one difference:
 every hide-rule is its own switch, off by default except the two you asked
